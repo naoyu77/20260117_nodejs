@@ -43,3 +43,15 @@ function(line, index) { ... }
 ```
 
 - `function` の代わりに `=>` を使うモダンな記法
+
+### Git/GitHub設定
+
+#### HTTPSをSSHに自動変換する設定
+
+```bash
+git config --global url."git@github.com:".insteadOf "https://github.com/"
+```
+
+- この設定により、`https://github.com/...` のURLを使っても自動的にSSH接続になる
+- SSHキーが設定済みであれば、パスワードやトークンなしでpush/pullが可能
+- 一度設定すれば、新しいリポジトリでも自動適用される
